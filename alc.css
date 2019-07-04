@@ -1,0 +1,60 @@
+*{
+    background-color:#283149;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+}
+header div img{
+    width:15%;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+h4{
+    color: #4ecca3;
+    margin: 0;
+    font-weight: lighter;
+}
+header div{
+    display: inline;
+}
+h1{
+    font-size: 2rem;
+    margin: 0;
+}
+#dayCount{
+    font-size: 3rem; 
+    font-weight: bolder;
+}
+main{
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+main div p{
+    background-color:#404b69;   
+    padding: 3rem;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+h2{
+    margin-bottom: 0.5rem;
+}
+#images{
+    width:100%;
+    display: inline;
+}
+#images img{
+    width: 10%;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+a:hover{
+    color: #4ecca3;
+}
+
+@media  screen and (min-width: 760px){
+    main{
+        width: 70%;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" />
+  <link rel="stylesheet" href="alc.css"/>
+  <title>Simple Counter for ALC 4.0</title>
+</head>
+
+<body>
+  <header><div><img src="alc2.png" alt="andelalogo"/></div><div><h1>ALC Counter</h1></div>
+  <h4>Simple Day Counter for the Andela Learning Community</h4>
+  </header>
+   <main>
+      <div>
+          <h2>Start Date: <span id="start"></span></h2>
+          <p id="dayCount"></p>
+      </div>
+      <div>
+        <h2>Tags</h2>
+        <p>#ALCwithGoogle #Andela #150DaysOfALC4 #ALCWithGoogle  <br/>@googleAfrica @Andela @pluralsight</p>
+      </div>
+      <div>
+        <h2>Partners</h2>
+        <div id="images">
+          <img src="alc.jpg" alt="andelalogo"/>
+          <img src="googleafrica.png" alt="googleAfrica"/>
+          <img src="pluralsight.png" alt="pluralsight"/>
+        </div>
+      </div>
+   </main>
+   <footer>
+      <div>
+          <a href="https://twitter.com/Andela">Andela</a> | 
+          <a href="https://twitter.com/googleafrica">GoogleAfrica</a> |
+          <a href="https://twitter.com/pluralsight">Pluralsight</a>
+        </div>
+      <div>By <a href="https://twitter.com/GodwinAgedah">@GodwinAgedah</a></div>
+      <h5>This Site was made by Godwin Agedah as part of the #150DaysOfALC4</h5>
+   </footer>
+  <script>
+
+      let startDate = new Date(2019, 05, 17);
+      console.log(`Start Date: ${startDate}`);   
+
+      let today = new Date();
+
+      let diff = today - startDate;
+      let diffDays = Math.ceil(diff / (1000 * 3600 * 24));
+
+      document.getElementById("dayCount").innerHTML = `Day ${diffDays}/150`
+      document.getElementById("start").innerHTML = `${startDate}`
+      console.log(`diffDays: ${diffDays}`);
+  
+  </script>
+</body>
+
+</html>
