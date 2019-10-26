@@ -10,6 +10,7 @@
 <body>
   <header><div><img src="alc2.png" alt="andelalogo"/></div><div><h1>ALC Counter</h1></div>
   <h4>Simple Day Counter for the Andela Learning Community</h4>
+  <h4>ALC4.0Rivers</h5>
   </header>
    <main>
       <div>
@@ -18,7 +19,7 @@
       </div>
       <div>
         <h2>Tags</h2>
-        <p>#ALCwithGoogle #Andela #150DaysOfALC4 #ALCWithGoogle  <br/>@googleAfrica @Andela @pluralsight</p>
+        <p>#ALCwithGoogle #Andela #150DaysOfALC4 #ALCWithGoogle  #ALC4.0Rivers<br/>@googleAfrica @Andela @pluralsight</p>
       </div>
       <div>
         <h2>Partners</h2>
@@ -31,7 +32,7 @@
    </main>
    <footer>
       <div>
-          <a href="https://twitter.com/Andela">Andela</a> | 
+          <a href="https://twitter.com/Andela">Andela</a> |
           <a href="https://twitter.com/googleafrica">GoogleAfrica</a> |
           <a href="https://twitter.com/pluralsight">Pluralsight</a>
         </div>
@@ -41,7 +42,7 @@
   <script>
 
       let startDate = new Date(2019, 05, 17);
-      console.log(`Start Date: ${startDate}`);   
+      console.log(`Start Date: ${startDate}`);
 
       let today = new Date();
 
@@ -49,7 +50,7 @@
       let diffDays = Math.ceil(diff / (1000 * 3600 * 24));
 
       document.getElementById("dayCount").innerHTML = `Day ${diffDays}/150`
-      document.getElementById("start").innerHTML = `${startDate}`
+      document.getElementById("start").innerHTML = `${startDate.toDateString()}`
       console.log(`diffDays: ${diffDays}`);
   
   </script>
