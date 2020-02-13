@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <header><div><img src="alc2.png" alt="andelalogo"/></div><div><h1>ALC Counter</h1></div>
+  <header><div><img src="alc2.png" alt="alclogo"/></div><div><h1>ALC Counter</h1></div>
   <h4>Simple Day Counter for the Andela Learning Community</h4>
   <h4>ALC4.0Rivers</h5>
   </header>
@@ -40,18 +40,35 @@
       <h5>This Site was made by Godwin Agedah as part of the #150DaysOfALC4</h5>
    </footer>
   <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js')
+          .then(reg => {
+            console.log('Service worker registered! 😎', reg);
+          })
+          .catch(err => {
+            console.log('😥 Service worker registration failed: ', err);
+          });
+      });
+    }
 
       let startDate = new Date(2019, 05, 17);
-      console.log(`Start Date: ${startDate}`);
+      // console.log(`Start Date: ${startDate}`);
 
       let today = new Date();
 
       let diff = today - startDate;
       let diffDays = Math.ceil(diff / (1000 * 3600 * 24));
 
-      document.getElementById("dayCount").innerHTML = `Day ${diffDays}/150`
+      if(diffDays <= 150) {
+        document.getElementById("dayCount").innerHTML = `Day ${diffDays}/150`
+      } else {
+        document.getElementById("dayCount").innerHTML = 'ALC4.0 Has Ended'
+      }
+      
+
       document.getElementById("start").innerHTML = `${startDate.toDateString()}`
-      console.log(`diffDays: ${diffDays}`);
+      // console.log(`diffDays: ${diffDays}`);
   
   </script>
 </body>
